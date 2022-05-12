@@ -1,0 +1,17 @@
+@media only screen and (max-width: 1060px) {
+  .hideItem {
+    display: none !important;
+  }
+  .showItems {
+    display: block !important;
+  }
+
+ /*  .flexitcolumn {
+    flex-direction: column !important;
+  } */
+}
+@media only screen and (min-width: 304px) and (max-width: 604px) {
+  .flexitcolumn {
+    flex-direction: column !important;
+  }
+}
