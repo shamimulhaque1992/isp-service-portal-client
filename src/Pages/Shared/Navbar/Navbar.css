@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1060px) {
+@media only screen and (max-width: 1056px) {
   .hideItem {
     display: none !important;
   }
@@ -6,11 +6,8 @@
     display: block !important;
   }
 
- /*  .flexitcolumn {
-    flex-direction: column !important;
-  } */
 }
-@media only screen and (min-width: 304px) and (max-width: 604px) {
+@media only screen and (min-width: 50px) and (max-width: 767px) {
   .flexitcolumn {
     flex-direction: column !important;
   }

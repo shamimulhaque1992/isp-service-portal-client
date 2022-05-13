@@ -4,12 +4,70 @@ import "./Navbar.css";
 const user = true;
 
 const Navbar = () => {
+  const navitem = (
+    <>
+      <li>
+        <Link to="/home">
+          <i className="fa-solid fa-house"></i>Home
+        </Link>
+      </li>
+
+      <li tabIndex="0">
+        <Link to="/packages">
+          Packages
+          <svg
+            className="fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+          >
+            <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+          </svg>
+        </Link>
+        <ul className="p-2 bg-base-100">
+          <li>
+            <Link to="/packages">25 Mbps Unlimited</Link>
+          </li>
+          <li>
+            <Link to="/packages">30 Mbps Unlimited</Link>
+          </li>
+          <li>
+            <Link to="/packages">35 Mbps Unlimited</Link>
+          </li>
+        </ul>
+      </li>
+      <li className="">
+        <Link to="/about">About</Link>
+      </li>
+      <li className="">
+        <Link to="/reviews">Reviews</Link>
+      </li>
+      <li className="">
+        <Link to="/contactus">Contact Us</Link>
+      </li>
+    </>
+  );
+  const search = (
+    <>
+      <div className="form-control">
+        <input
+          type="text"
+          placeholder="Search"
+          className="input input-bordered"
+        />
+      </div>
+    </>
+  );
   return (
-    <div className="flex justify-between flexitcolumn navbar bg-base-100">
+    <div className="flex justify-between navbar bg-base-100 flexitcolumn">
       {/* nav menu dropdown */}
-      <div className="">
+      <div className="flex justify-around">
         <div className="flex-none dropdown hidden showItems">
-          <label tabindex="0" className="btn btn-ghost btn-circle">
+          <label
+            tabIndex="0"
+            className=" btn btn-ghost btn-circle dropdown-hover"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -18,57 +76,19 @@ const Navbar = () => {
               stroke="currentColor"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M4 6h16M4 12h16M4 18h7"
               />
             </svg>
           </label>
           <ul
-            tabindex="0"
+            tabIndex="0"
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <li>
-              <Link to="/">
-                <i className="fa-solid fa-house"></i>Home
-              </Link>
-            </li>
-
-            <li tabIndex="0">
-              <Link to="/">
-                Packages
-                <svg
-                  className="fill-current"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
-                </svg>
-              </Link>
-              <ul className="p-2 bg-base-100">
-                <li>
-                  <Link to="/">25 Mbps Unlimited</Link>
-                </li>
-                <li>
-                  <Link to="/">30 Mbps Unlimited</Link>
-                </li>
-                <li>
-                  <Link to="/">35 Mbps Unlimited</Link>
-                </li>
-              </ul>
-            </li>
-            <li className="">
-              <Link to="/">About</Link>
-            </li>
-            <li className="">
-              <Link to="/">Reviews</Link>
-            </li>
-            <li className="">
-              <Link to="/">Contact Us</Link>
-            </li>
+            {navitem}
+            <div className="hidden showItems">{search}</div>
           </ul>
         </div>
 
@@ -80,62 +100,14 @@ const Navbar = () => {
           </Link>
         </div>
       </div>
-
       {/* nav items */}
       <div className="flex-1 w-40 hideItem">
-        <ul className="menu menu-horizontal p-0">
-          <li>
-            <Link to="/">
-              <i className="fa-solid fa-house"></i>Home
-            </Link>
-          </li>
-
-          <li tabIndex="0">
-            <Link to="/">
-              Packages
-              <svg
-                className="fill-current"
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-              >
-                <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
-              </svg>
-            </Link>
-            <ul className="p-2 bg-base-100">
-              <li>
-                <Link to="/">25 Mbps Unlimited</Link>
-              </li>
-              <li>
-                <Link to="/">30 Mbps Unlimited</Link>
-              </li>
-              <li>
-                <Link to="/">35 Mbps Unlimited</Link>
-              </li>
-            </ul>
-          </li>
-          <li className="hideItem">
-            <Link to="/">About</Link>
-          </li>
-          <li className="hideItem">
-            <Link to="/">Reviews</Link>
-          </li>
-          <li className="hideItem">
-            <Link to="/">Contact Us</Link>
-          </li>
-        </ul>
+        <ul className="menu menu-horizontal p-0">{navitem}</ul>
       </div>
 
       <div className="gap-2">
         {/* search */}
-        <div className="form-control">
-          <input
-            type="text"
-            placeholder="Search"
-            className="input input-bordered"
-          />
-        </div>
+        <div className="hideItem">{search}</div>
 
         {/* cart */}
         <div className="dropdown dropdown-end">
@@ -189,13 +161,13 @@ const Navbar = () => {
                 className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52"
               >
                 <li>
-                  <Link to="/" className="justify-between">
+                  <Link to="/profile" className="justify-between">
                     Profile
                     <span className="badge">New</span>
                   </Link>
                 </li>
                 <li>
-                  <Link to="/">Settings</Link>
+                  <Link to="/settings">Settings</Link>
                 </li>
                 <li>
                   <Link to="/">Logout</Link>
@@ -205,8 +177,8 @@ const Navbar = () => {
           ) : (
             <>
               <div className="signin">
-                <Link to="/" className="btn normal-case text-xl">
-                  Signin
+                <Link to="/login" className="btn normal-case text-xl">
+                  Login
                 </Link>
               </div>
             </>
