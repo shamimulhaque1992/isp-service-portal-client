@@ -4,11 +4,11 @@ import "./Banner.css";
 const Banner = () => {
   return (
     <div>
-      <div className="hero min-h-screen bg-base-200" style="background-image: url(https://api.lorem.space/image/fashion?w=1000&h=800);">
+      <div className="hero heros min-h-screen bg-base-200 mb-20 pb-10">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img
-            src="https://api.lorem.space/image/movie?w=260&h=400"
-            className="max-w-sm rounded-lg shadow-2xl" alt=""
+            src="https://images.unsplash.com/photo-1534224039826-c7a0eda0e6b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8aW50ZXJuZXQlMjBjb25uZWN0aW9ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+            className="w-11/12 max-w-sm rounded-lg shadow-2xl" alt=""
           />
           <div>
             <h1 className="text-5xl font-bold">Box Office News!</h1>
