@@ -7,7 +7,7 @@ const TakeService = () => {
       <div className="hero takeServiceHero min-h-screen bg-base-200">
         <div className="relative hero-content flex-col lg:flex-row">
           <img
-            src="https://images.unsplash.com/photo-1570470836811-78ef04bb23d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8ZW5naW5lZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60"
+            src="../../../assets/My_project.png"
             className="takeServiceImg max-w-sm rounded-lg shadow-2xl" alt=""
           />
           <div>
