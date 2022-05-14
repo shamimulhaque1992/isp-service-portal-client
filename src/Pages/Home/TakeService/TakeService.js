@@ -1,16 +1,17 @@
 import React from "react";
-import "./TakeSerivce.css"
+import "./TakeSerivce.css";
+import engineer from "../../../assets/images/engineer.png"
 
 const TakeService = () => {
   return (
-    <div className="">
-      <div className="hero takeServiceHero min-h-screen bg-base-200">
+    <div className="mt-96">
+      <div className="hero takeServiceHero bg-base-200">
         <div className="relative hero-content flex-col lg:flex-row">
           <img
-            src="../../../assets/My_project.png"
-            className="takeServiceImg max-w-sm rounded-lg shadow-2xl" alt=""
+            src={engineer}
+            className="mt-[-100px] w-11/12 max-w-sm " alt=""
           />
-          <div>
+          <div className="mb-16">
             <h1 className="text-5xl font-bold">Box Office News!</h1>
             <p className="py-6">
               Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda

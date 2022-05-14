@@ -3,12 +3,12 @@ import "./FeatureService.css"
 
 const FeatureService = () => {
   return (
-    <div className="container mx-auto mb-20">
-      <div className="hero fetureHero ">
+    <div className="container mx-auto mt-72">
+      <div className="hero fetureHero">
         <div className="hero-content flex-col lg:flex-row">
           <img
             src="https://images.unsplash.com/photo-1531765408077-9a1f85f90df1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTV8fGludGVybmV0JTIwY29ubmVjdGlvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=400&q=60"
-            className="max-w-sm rounded-lg shadow-2xl"
+            className="w-11/12 max-w-sm rounded-lg shadow-2xl"
             alt=""
           />
           <div>
