@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useState } from "react";
+import AvailablePackages from "./AvailablePackages/AvailablePackages";
+import PackagesBanner from "./PackgesBanner/PackagesBanner";
 
 const Packages = () => {
-    return (
-        <div>
-            <h1>This is package</h1>
-        </div>
-    );
+  const [currentDate, setCurrentDate] = useState(new Date());
+  return (
+    <div>
+      <PackagesBanner currentDate={currentDate} setCurrentDate={setCurrentDate}></PackagesBanner>
+      <AvailablePackages currentDate={currentDate} setCurrentDate={setCurrentDate}></AvailablePackages>
+    </div>
+  );
 };
 
 export default Packages;
